@@ -32,7 +32,7 @@ const DemoModal = ({
             <a href="tel:855-233-4791">Call Viora Sales Agent</a>
           </h3>
           <p className="text-sm text-gray-500">
-            Boost your sales with Viora.ai's AI-powered Virtual SDR—automating outreach, engaging leads, and driving growth effortlessly.
+            Boost your sales with Viora AI-powered Virtual SDR—automating outreach, engaging leads, and driving growth effortlessly.
           </p>
         </div>
       </div>
