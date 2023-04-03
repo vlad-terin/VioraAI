@@ -92,7 +92,7 @@ export default function Home() {
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
       <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, }) => (
+        {features.map(({ title, description, demo }) => (
           <Card
             key={title}
             title={title}
@@ -146,7 +146,7 @@ const features = [
       "Viora has the ability to answer questions trained on your website content",
     demo: (
       <div className="flex items-center justify-center space-x-20">
-        <a href="chatbot.viora.ai" rel="noopener noreferrer">
+        <a href="https://chatbot.viora.ai" rel="noopener noreferrer">
           <Image alt="viora logo" src="/logo.png" width={50} height={50} />
         </a>
         {/* <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} /> */}
