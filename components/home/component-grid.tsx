@@ -38,6 +38,7 @@ export default function ComponentGrid() {
     Insurance: "/icons/people.png",
     Telecom: "/icons/wifi.png",
     Healthcare: "/icons/heart.png",
+    Therapy: "/icons/therapy.png",
   };
   // const { DemoModal, setShowDemoModal } = useDemoModal();
   // const [openPopover, setOpenPopover] = useState(false);

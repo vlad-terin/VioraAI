@@ -39,6 +39,12 @@ const categoryData = {
       "Improve patient care with Viora AI-powered Virtual SDR—facilitating appointment scheduling, medication reminders, and healthcare inquiries.",
     phoneNumber: "tel:855-223-4791", // Phone number for Healthcare
   },
+  Therapy: {
+    text: "Call Therapy AI",
+    description:
+      "Empower your therapy practice with Viora's AI-powered Virtual SDR. Our innovative AI agent streamlines patient engagement by seamlessly scheduling therapy appointments.",
+    phoneNumber: "tel:855-223-4791", // Phone number for Healthcare
+  },
 };
 
 export type CategoryType = keyof typeof categoryData;
