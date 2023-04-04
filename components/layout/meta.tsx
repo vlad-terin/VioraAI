@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-const DOMAIN = "https://precedent.dev";
+const DOMAIN = "https://viora.ai";
 
 export default function Meta({
-  title = "Precedent - Building blocks for your Next.js project",
-  description = "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
+  title = "Viora Conversational AI",
+  description = "Viora AI revolutionizes sales engagement with real-time, personalized interactions and 24/7 lead nurturing",
   image = `${DOMAIN}/api/og`,
 }: {
   title?: string;
@@ -15,7 +15,9 @@ export default function Meta({
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/images/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png" />
 
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
