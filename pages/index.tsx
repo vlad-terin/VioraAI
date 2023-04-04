@@ -3,7 +3,7 @@ import Layout from "@/components/layout";
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
 import { DEPLOY_URL, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import { Twitter } from "@/components/shared/icons";
+import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
@@ -76,7 +76,7 @@ export default function Home() {
           {/*       strokeLinejoin="round" */}
           {/*     /> */}
           {/*   </svg> */}
-          {/* <p>Deploy to Vercel</p> */}
+          {/*   <p>Deploy to Vercel</p> */}
           {/* </a> */}
           {/* <a */}
           {/*   className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800" */}
@@ -127,7 +127,7 @@ const features = [
   {
     title: "Viora AI SDR",
     description:
-      "Viora AI revolutionizes sales engagement with real-time, personalized interactions and 24/7 lead nurturing",
+      "Viora AI transforms sales with real-time, personalized interactions and 24/7 nurturing.",
     demo: (
       <a href={DEPLOY_URL}>
         {/* eslint-disable-next-line @next/next/no-img-element */}

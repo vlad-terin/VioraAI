@@ -20,7 +20,7 @@ function CategoryButton({ category, iconPath }: CategoryButtonProps) {
       <DemoModal />
       <button
         onClick={() => setShowDemoModal(true)}
-        className="flex w-40 items-center justify-center space-x-2 rounded-md border border-gray-300 px-3 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100"
+        className="flex w-30 items-center justify-center space-x-2 rounded-md border border-gray-300 px-3 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100"
       >
         <Image src={iconPath} alt={category} width={20} height={20} />
         <p className="text-gray-600">{category}</p>
