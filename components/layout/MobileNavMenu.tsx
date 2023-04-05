@@ -15,7 +15,7 @@ export default function MobileNavMenu() {
     >
       <div className="md:hidden text-center text-2xl mt-16">
         <ScrollLink to="home-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={handleCloseMenu}>
-          Products
+          Home
         </ScrollLink>
         <ScrollLink to="products-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={handleCloseMenu}>
           Products

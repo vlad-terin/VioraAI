@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Link as ScrollLink } from 'react-scroll';
 import MobileNavMenu from "./MobileNavMenu";
 import Link from "next/link";
 import { useState } from "react";
@@ -81,19 +82,22 @@ export default function Layout({
                 </p>
               </Link>
 
-              <div className="hidden md:flex space-x-4">
-                <Link href="/products">
-                  <h2 className="nav-link text-gray-700 hover:text-blue-500 cursor-pointer font-display text-l">Products</h2>
-                </Link>
-                <Link href="/usecases">
-                  <h2 className="nav-link text-gray-700 hover:text-blue-500 cursor-pointer font-display text-l">Use Cases</h2>
-                </Link>
-                <Link href="/vision">
-                  <h2 className="nav-link text-gray-700 hover:text-blue-500 cursor-pointer font-display text-l">Vision</h2>
-                </Link>
-                <Link href="/team">
-                  <h2 className="nav-link text-gray-700 hover:text-blue-500 cursor-pointer font-display text-l">Our Team</h2>
-                </Link>
+              <div className="hidden md:flex space-x-1">
+                <ScrollLink to="home-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
+                  Home
+                </ScrollLink>
+                <ScrollLink to="products-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
+                  Products
+                </ScrollLink>
+                <ScrollLink to="usecases-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
+                  Use Cases
+                </ScrollLink>
+                <ScrollLink to="vision-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
+                  Vision
+                </ScrollLink>
+                <ScrollLink to="team-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
+                  Our Team
+                </ScrollLink>
               </div>
             </div>
           )}

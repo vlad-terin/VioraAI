@@ -1,5 +1,6 @@
 import Card from "@/components/home/card";
 import Layout from "@/components/layout";
+import { Link as ScrollLink } from 'react-scroll';
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
 import { DEPLOY_URL, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
@@ -109,11 +110,10 @@ export default function Home() {
         ))}
       </div>
 
-
       {/* "Products" section with content and gradient background styling */}
       <div id="products-section" className="py-10 px-5 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white">
         <h2 className="text-3xl font-bold mb-5">Products</h2>
-        <p>Explore Viora{"'"}s wide range of products designed to revolutionize sales engagement. Our AI-powered tools help businesses connect with customers, answer questions, and drive sales like never before.</p>
+        <p>Explore Viora's wide range of products designed to revolutionize sales engagement. Our AI-powered tools help businesses connect with customers, answer questions, and drive sales like never before.</p>
         {/* ... Additional content for the Products section */}
       </div>
 
@@ -127,7 +127,7 @@ export default function Home() {
       {/* "Vision" section with content and gradient background styling */}
       <div id="vision-section" className="py-10 px-5 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 text-white">
         <h2 className="text-3xl font-bold mb-5">Vision</h2>
-        <p>At Viora, our vision is to redefine the sales experience. With cutting-edge AI technology, we{"'"}re building a future where businesses can effortlessly engage with customers and deliver unparalleled service.</p>
+        <p>At Viora, our vision is to redefine the sales experience. With cutting-edge AI technology, we're building a future where businesses can effortlessly engage with customers and deliver unparalleled service.</p>
         {/* ... Additional content for the Vision section */}
       </div>
 
