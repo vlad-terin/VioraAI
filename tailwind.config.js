@@ -11,6 +11,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      width: {
+        '3/4': '75%', // Custom class for 75% width
+      },
       fontFamily: {
         display: ["var(--font-sf)", "system-ui", "sans-serif"],
         default: ["var(--font-inter)", "system-ui", "sans-serif"],

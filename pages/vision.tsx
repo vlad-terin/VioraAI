@@ -1,3 +1,4 @@
+
 import Card from "@/components/home/card";
 import Layout from "@/components/layout";
 import Balancer from "react-wrap-balancer";
@@ -12,7 +13,6 @@ export default function Home() {
   return (
     <Layout>
       <motion.div
-        id="home-section"
         className="max-w-xl px-5 xl:px-0"
         initial="hidden"
         whileInView="show"
@@ -108,35 +108,6 @@ export default function Home() {
           />
         ))}
       </div>
-
-
-      {/* "Products" section with content and gradient background styling */}
-      <div id="products-section" className="py-10 px-5 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white">
-        <h2 className="text-3xl font-bold mb-5">Products</h2>
-        <p>Explore Viora's wide range of products designed to revolutionize sales engagement. Our AI-powered tools help businesses connect with customers, answer questions, and drive sales like never before.</p>
-        {/* ... Additional content for the Products section */}
-      </div>
-
-      {/* "Use Cases" section with content and gradient background styling */}
-      <div id="usecases-section" className="py-10 px-5 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-600 text-white">
-        <h2 className="text-3xl font-bold mb-5">Use Cases</h2>
-        <p>Viora is trusted by businesses across industries. Our AI-driven solutions support sales, customer service, and more, by delivering personalized interactions and real-time responses.</p>
-        {/* ... Additional content for the Use Cases section */}
-      </div>
-
-      {/* "Vision" section with content and gradient background styling */}
-      <div id="vision-section" className="py-10 px-5 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 text-white">
-        <h2 className="text-3xl font-bold mb-5">Vision</h2>
-        <p>At Viora, our vision is to redefine the sales experience. With cutting-edge AI technology, we're building a future where businesses can effortlessly engage with customers and deliver unparalleled service.</p>
-        {/* ... Additional content for the Vision section */}
-      </div>
-
-      {/* "Our Team" section with content and gradient background styling */}
-      <div id="team-section" className="py-10 px-5 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 text-white">
-        <h2 className="text-3xl font-bold mb-5">Our Team</h2>
-        <p>Meet the innovative minds behind Viora. Our team is comprised of experts in AI, sales, and customer service, all working together to create products that transform the way businesses connect with customers.</p>
-        {/* ... Additional content for the Our Team section */}
-      </div>
     </Layout>
   );
 }
@@ -193,3 +164,4 @@ const features = [
     ),
   },
 ];
+
