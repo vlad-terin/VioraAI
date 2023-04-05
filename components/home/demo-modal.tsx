@@ -19,31 +19,31 @@ const categoryData = {
     text: "Call Banking Sales Agent",
     description:
       "Enhance your banking services with Viora AI-powered Virtual SDR...",
-    phoneNumber: "tel:855-223-4791", // Phone number for Banking
+    phoneNumber: "tel:855-247-2892", // Phone number for Banking
   },
   Insurance: {
     text: "Call Insurance Sales Agent",
     description:
       "Streamline your insurance services with Viora AI-powered Virtual SDR—automating policy inquiries, claims management, and more.",
-    phoneNumber: "tel:855-223-4791", // Phone number for Insurance
+    phoneNumber: "tel:585-539-8496", // Phone number for Insurance
   },
   Telecom: {
     text: "Call Telecom Sales Agent",
     description:
       "Enhance your telecom customer experience with Viora AI-powered Virtual SDR—providing support, managing subscriptions, and handling network issues.",
-    phoneNumber: "tel:855-223-4791", // Phone number for Telecom
+    phoneNumber: "tel:252-591-5672", // Phone number for Telecom
   },
   Healthcare: {
     text: "Call Healthcare Sales Agent",
     description:
       "Improve patient care with Viora AI-powered Virtual SDR—facilitating appointment scheduling, medication reminders, and healthcare inquiries.",
-    phoneNumber: "tel:855-223-4791", // Phone number for Healthcare
+    phoneNumber: "tel:585-496-2881", // Phone number for Healthcare
   },
   Therapy: {
     text: "Call Therapy AI",
     description:
       "Empower your therapy practice with Viora's AI-powered Virtual SDR. Our innovative AI agent streamlines patient engagement by seamlessly scheduling therapy appointments.",
-    phoneNumber: "tel:855-223-4791", // Phone number for Healthcare
+    phoneNumber: "tel:585-539-8503", // Phone number for Healthcare
   },
 };
 
