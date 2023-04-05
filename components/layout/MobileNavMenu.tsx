@@ -51,7 +51,7 @@ export default function MobileNavMenu() {
         </div>
       )}
       <button
-        className="block md:hidden p-2 focus:outline-none"
+        className="block md:hidden top-4 right-4 p-2 focus:outline-none"
         onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
