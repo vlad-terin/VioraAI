@@ -1,4 +1,3 @@
-
 import Card from "@/components/home/card";
 import Layout from "@/components/layout";
 import Balancer from "react-wrap-balancer";
