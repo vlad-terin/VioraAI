@@ -1,59 +1,62 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef, RefObject } from 'react'
+
 import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/home/container'
-import backgroundImage from '@/images/featurebg.png'
+import backgroundImage from '@/images/background-features.jpg'
 import screenshotExpenses from '@/images/featurebg.png'
 import screenshotPayroll from '@/images/featurebg.png'
 import screenshotReporting from '@/images/featurebg.png'
-import screenshotVatReturns from '@/images/featurebg.png'
-
+import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
 const features = [
   {
-    title: 'Customer Service',
+    title: 'AI-Powered Customer Support',
     description:
-      'Enhance your customer support with Viora AI. Provide instant responses, automate repetitive tasks, and improve customer satisfaction.',
-    image: screenshotPayroll, // Using the old image variable
+      'Enhance customer support with AI-driven chatbot offering real-time responses, task automation, and multilingual support for your audience.',
+    image: screenshotPayroll,
   },
   {
-    title: 'Marketing & Sales',
+    title: 'AI-Driven Marketing & Sales',
     description:
-      'Leverage Viora AI to engage and convert leads. Personalize your marketing campaigns and automate sales interactions with AI-powered conversations.',
-    image: screenshotExpenses, // Using the old image variable
+      'Empower marketing and sales with AI-powered recommendation system, personalized campaigns, automated interactions, and revenue-driving insights.',
+    image: screenshotExpenses,
   },
   {
-    title: 'Content Generation',
+    title: 'Automated Content Generation',
     description:
-      'Empower your content creation process with Viora AI. Generate creative and unique content for blogs, social media, and other digital platforms.',
-    image: screenshotVatReturns, // Using the old image variable
+      'Revolutionize content creation with AI-powered natural language processing, generating unique content, personalized copy, and enhancing brand digital presence.',
+    image: screenshotVatReturns,
   },
   {
-    title: 'Virtual Assistant',
+    title: 'AI-Enhanced Virtual Assistant',
     description:
-      'Make your virtual assistant smarter with Viora AI. Assist users with tasks, answer questions, and provide helpful information around the clock.',
-    image: screenshotReporting, // Using the old image variable
+      'Elevate virtual assistants with AI-powered features for administrative tasks, 24/7 intelligent support and lead generation, and a seamless, personalized user experience.',
+    image: screenshotReporting,
   },
 ]
-
-
 export function PrimaryFeatures() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
+  const [selectedTabIndex, setSelectedTabIndex] = useState(0)
 
   useEffect(() => {
     let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
-
-    function onMediaQueryChange({ matches }: { matches: boolean }) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
+    function onMediaQueryChange(event: MediaQueryListEvent) {
+      setTabOrientation(event.matches ? 'vertical' : 'horizontal')
     }
-
-    onMediaQueryChange(lgMediaQuery)
     lgMediaQuery.addEventListener('change', onMediaQueryChange)
+
+    // Auto-select interval setup
+    const interval = 10000
+    const autoSelectTimer = setInterval(() => {
+      setSelectedTabIndex((prevIndex) => (prevIndex + 1) % features.length)
+    }, interval)
 
     return () => {
       lgMediaQuery.removeEventListener('change', onMediaQueryChange)
+      clearInterval(autoSelectTimer) // Clear the auto-select timer
     }
   }, [])
 
@@ -63,12 +66,12 @@ export function PrimaryFeatures() {
       aria-labelledby="features-title"
       className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-[44%] -translate-y-[42%]">
+      <div className="-translate-x-[44%] -translate-y-[42%]">
         <Image
           src={backgroundImage}
           alt=""
-          unoptimized
           fill
+          unoptimized
         />
       </div>
       <Container className="relative">
@@ -85,12 +88,14 @@ export function PrimaryFeatures() {
         </div>
         <Tab.Group
           as="div"
+          key={selectedTabIndex} // Use custom key based on selectedTabIndex
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
+          defaultIndex={selectedTabIndex} // Use defaultIndex to set selected tab
         >
           {({ selectedIndex }) => (
             <>
-              <div className="px-2 -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible m:overflow-visible sm:pb-0 lg:col-span-5">
+              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
                 <Tab.List className="relative z-10 flex space-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-y-1 lg:space-x-0 lg:whitespace-normal">
                   {features.map((feature, featureIndex) => (
                     <div
@@ -162,3 +167,4 @@ export function PrimaryFeatures() {
     </section>
   )
 }
+

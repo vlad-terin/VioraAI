@@ -12,7 +12,7 @@ export default function Integrations() {
           <li className="flex justify-center">
             <Image
               src="/gmail.svg"
-              alt="Transistor"
+              alt="Gmail"
               width={80}
               height={80}
               className="sm:width-100 sm:height-100"
@@ -22,7 +22,7 @@ export default function Integrations() {
           <li className="flex justify-center">
             <Image
               src="/meet.svg"
-              alt="Tuple"
+              alt="Meet"
               width={80}
               height={80}
               className="sm:width-100 sm:height-100"
@@ -31,7 +31,7 @@ export default function Integrations() {
           <li className="flex justify-center">
             <Image
               src="/docs.svg"
-              alt="StaticKit"
+              alt="Docs"
               width={80}
               height={80}
               className="sm:width-100 sm:height-100"
@@ -41,7 +41,7 @@ export default function Integrations() {
           <li className="flex justify-center">
             <Image
               src="/calendar.svg"
-              alt="Mirage"
+              alt="Calendar"
               width={80}
               height={80}
               className="sm:width-100 sm:height-100"
@@ -51,7 +51,7 @@ export default function Integrations() {
           <li className="flex justify-center">
             <Image
               src="/zoom.svg"
-              alt="Laravel"
+              alt="Zoom"
               width={80}
               height={80}
               className="sm:width-100 sm:height-100"
@@ -61,7 +61,67 @@ export default function Integrations() {
           <li className="flex justify-center">
             <Image
               src="/salesforce.svg"
-              alt="Statamic"
+              alt="Salesforce"
+              width={80}
+              height={80}
+              className="sm:width-100 sm:height-100"
+              unoptimized
+            />
+          </li>
+          <li className="flex justify-center">
+            <Image
+              src="/intercom.png"
+              alt="Salesforce"
+              width={80}
+              height={80}
+              className="sm:width-100 sm:height-100"
+              unoptimized
+            />
+          </li>
+          <li className="flex justify-center">
+            <Image
+              src="/hubspot.png"
+              alt="Salesforce"
+              width={80}
+              height={80}
+              className="sm:width-100 sm:height-100"
+              unoptimized
+            />
+          </li>
+          <li className="flex justify-center">
+            <Image
+              src="/mailchimp.png"
+              alt="Salesforce"
+              width={80}
+              height={80}
+              className="sm:width-100 sm:height-100"
+              unoptimized
+            />
+          </li>
+          <li className="flex justify-center">
+            <Image
+              src="/servicenow.png"
+              alt="Salesforce"
+              width={80}
+              height={80}
+              className="sm:width-100 sm:height-100"
+              unoptimized
+            />
+          </li>
+          <li className="flex justify-center">
+            <Image
+              src="/marketo.png"
+              alt="Salesforce"
+              width={80}
+              height={80}
+              className="sm:width-100 sm:height-100"
+              unoptimized
+            />
+          </li>
+          <li className="flex justify-center">
+            <Image
+              src="/zendesk.png"
+              alt="Salesforce"
               width={80}
               height={80}
               className="sm:width-100 sm:height-100"

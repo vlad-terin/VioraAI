@@ -11,6 +11,7 @@ import { DEPLOY_URL, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
+import VirtualGrid from "@/components/home/virtual-grid";
 import Image from "next/image";
 
 export default function Home() {
@@ -97,7 +98,7 @@ export default function Home() {
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
       <div id="products-section" className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo }) => (
+        {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
             title={title}
@@ -105,11 +106,13 @@ export default function Home() {
             demo={
               title === "Viora AI SDR" ? (
                 <ComponentGrid />
+              ) : title === "Interact with Viora AI SDR" ? (
+                <VirtualGrid />
               ) : (
                 demo
               )
             }
-          // large={large}
+            large={large}
           />
         ))}
       </div>
@@ -121,43 +124,17 @@ export default function Home() {
       <div id="usecases-section" className="relative">
         <PrimaryFeatures />
       </div>
-
-      {/* <h2 className="text-3xl font-bold mb-5">Products</h2> */}
-      {/* <div id="products-section" className="py-10 px-5 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white"> */}
-      {/*   <p>Explore Viora&apos;s wide range of products designed to revolutionize sales engagement. Our AI-powered tools help businesses connect with customers, answer questions, and drive sales like never before.</p> */}
-      {/* </div> */}
-
-      {/* <div id="usecases-section" className="py-10 px-5 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-600 text-white"> */}
-      {/*   <h2 className="text-3xl font-bold mb-5">Use Cases</h2> */}
-      {/*   <p>Viora is trusted by businesses across industries. Our AI-driven solutions support sales, customer service, and more, by delivering personalized interactions and real-time responses.</p> */}
-      {/* </div> */}
-
-      {/* <div id="vision-section" className="py-10 px-5 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 text-white"> */}
-      {/*   <h2 className="text-3xl font-bold mb-5">Vision</h2> */}
-      {/*   <p>At Viora, our vision is to redefine the sales experience. With cutting-edge AI technology, we&apos;re building a future where businesses can effortlessly engage with customers and deliver unparalleled service.</p> */}
-      {/* </div> */}
-
-      {/* <div id="team-section" className="py-10 px-5 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 text-white"> */}
-      {/*   <h2 className="text-3xl font-bold mb-5">Our Team</h2> */}
-      {/*   <p>Meet the innovative minds behind Viora. Our team is comprised of experts in AI, sales, and customer service, all working together to create products that transform the way businesses connect with customers.</p> */}
-      {/* </div> */}
     </Layout>
   );
 }
 
 const features = [
-  // {
-  //   title: "Interact with Viora AI SDR",
-  //   description:
-  //     "Our conversational AI revolutionizes sales engagement with real-time, personalized interactions and 24/7 lead nurturing.",
-  //   large: true,
-  // },
-  // {
-  //   title: "Viora Conversational AI",
-  //   description:
-  //     "Viora has the ability to answer questions trained on your website content",
-  //   demo: <WebVitals />,
-  // },
+  {
+    title: "Interact with Viora AI SDR",
+    description:
+      "Our conversational AI revolutionizes sales engagement with real-time, personalized interactions and 24/7 lead nurturing.",
+    large: true,
+  },
   {
     title: "Viora AI SDR",
     description:

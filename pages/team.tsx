@@ -97,6 +97,23 @@ export default function Home() {
             title={title}
             description={description}
             demo={
+              title === "Viora Generative AI SDR" ? (
+                <ComponentGrid />
+              ) : (
+                demo
+              )
+            }
+          // large={large}
+          />
+        ))}
+      </div>
+      <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+        {features.map(({ title, description, demo }) => (
+          <Card
+            key={title}
+            title={title}
+            description={description}
+            demo={
               title === "Viora AI SDR" ? (
                 <ComponentGrid />
               ) : (
@@ -124,6 +141,21 @@ const features = [
   //     "Viora has the ability to answer questions trained on your website content",
   //   demo: <WebVitals />,
   // },
+  {
+    title: "Viora Generative AI",
+    description:
+      "Viora AI transforms sales with real-time, personalized interactions and 24/7 nurturing.",
+    demo: (
+      <a href={DEPLOY_URL}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://vercel.com/button"
+          alt="Deploy with Vercel"
+          width={120}
+        />
+      </a>
+    ),
+  },
   {
     title: "Viora AI SDR",
     description:
