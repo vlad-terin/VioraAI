@@ -63,21 +63,21 @@ const DemoModal = ({
 
   return (
     <Modal showModal={showDemoModal} setShowModal={setShowDemoModal}>
-      <div className="w-full overflow-hidden md:max-w-md md:rounded-2xl md:border md:border-gray-100 md:shadow-xl">
-        <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16">
-          <a href={phoneNumber}>
-            <Image
-              src="/call.png"
-              alt="Viora call Logo"
-              className="h-10 w-10 rounded-full"
-              width={20}
-              height={20}
-            />
-          </a>
-          <h3 className="font-display text-2xl font-bold">
+      <div className="w-full h-[50vh] overflow-hidden md:max-w-md md:rounded-2xl md:border md:border-gray-100 md:shadow-xl flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center justify-center space-y-4 bg-white px-4 py-6 pt-8 text-center md:px-16">
+          <h3 className="font-display text-2xl font-bold text-center py-6">
             <a href={phoneNumber}>{categoryData[category].text}</a>
           </h3>
-          <p className="text-sm text-gray-500">
+          <a href={phoneNumber} className="animate-clickable py-6">
+            <Image
+              src="/phone.png"
+              alt="Viora call Logo"
+              className="h-20 w-20 rounded-full"
+              width={40}
+              height={40}
+            />
+          </a>
+          <p className="text-lg text-gray-500 text-center py-6">
             {categoryData[category].description}
           </p>
         </div>

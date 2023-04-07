@@ -19,7 +19,7 @@ export default function Home() {
     <Layout>
       <motion.div
         id="home-section"
-        className="max-w-xl px-5 xl:px-0"
+        className="max-w-2xl px-5 xl:px-0"
         initial="hidden"
         whileInView="show"
         animate="show"
@@ -49,14 +49,14 @@ export default function Home() {
           className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer>Experience the future of sales with Viora</Balancer>
+          <Balancer>The Future of Autonomous Business Operations and Sales with Viora AI</Balancer>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>
-            Harness the power of conversational AI with Viora to deliver personalized and meaningful sales interactions.
+            Harness the power of Generative Autonomous AI with Viora to deliver personalized and meaningful interactions.
           </Balancer>
         </motion.p>
         {/* <motion.div */}
@@ -106,7 +106,7 @@ export default function Home() {
             demo={
               title === "Viora AI SDR" ? (
                 <ComponentGrid />
-              ) : title === "Interact with Viora AI SDR" ? (
+              ) : title === "Viora Generative Autonomous AI Example" ? (
                 <VirtualGrid />
               ) : (
                 demo
@@ -130,9 +130,9 @@ export default function Home() {
 
 const features = [
   {
-    title: "Interact with Viora AI SDR",
+    title: "Viora Generative Autonomous AI Example",
     description:
-      "Our conversational AI revolutionizes sales engagement with real-time, personalized interactions and 24/7 lead nurturing.",
+      "Our AI enhances organizational efficiency with intelligent decisions, dynamic personalization, and seamless interactions.",
     large: true,
   },
   {

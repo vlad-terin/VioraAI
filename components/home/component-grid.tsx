@@ -43,7 +43,7 @@ export default function ComponentGrid() {
   // const { DemoModal, setShowDemoModal } = useDemoModal();
   // const [openPopover, setOpenPopover] = useState(false);
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 gap-4 px-4">
       {Object.entries(categoriesWithIcons).map(([category, iconPath]) => (
         <CategoryButton key={category} category={category as CategoryType} iconPath={iconPath} />
       ))}
