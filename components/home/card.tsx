@@ -14,8 +14,12 @@ export default function Card({
   large?: boolean;
 }) {
   return (
+    // <div
+    //   className={`bg-gradient-to-br from-indigo-50 via-white to-cyan-100 relative col-span-1 overflow-hidden flowingGradient rounded-xl border border-gray-200 bg-white shadow-md ${large ? "md:col-span-3" : ""} transition-transform duration-300 ease-in-out transform hover:scale-105`}
+    // >
+
     <div
-      className={`relative col-span-1  overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ${large ? "md:col-span-3" : ""
+      className={`bg-gradient-to-br from-indigo-50 via-white to-cyan-100 relative col-span-1  overflow-hidden flowingGradient rounded-xl border border-gray-200 bg-white shadow-md ${large ? "md:col-span-3" : ""
         }`}
     >
       <div className="flex h-60 items-center justify-center">{demo}</div>

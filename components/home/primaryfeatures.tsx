@@ -9,7 +9,7 @@ import backgroundImage from '@/images/background-features.jpg'
 import screenshotExpenses from '@/images/featurebg.png'
 import screenshotPayroll from '@/images/featurebg.png'
 import screenshotReporting from '@/images/featurebg.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotVatReturns from '@/images/featurebg.png'
 
 const features = [
   {
@@ -48,24 +48,37 @@ export function PrimaryFeatures() {
     }
     lgMediaQuery.addEventListener('change', onMediaQueryChange)
 
-    // Auto-select interval setup
-    const interval = 10000
-    const autoSelectTimer = setInterval(() => {
-      setSelectedTabIndex((prevIndex) => (prevIndex + 1) % features.length)
-    }, interval)
-
     return () => {
       lgMediaQuery.removeEventListener('change', onMediaQueryChange)
-      clearInterval(autoSelectTimer) // Clear the auto-select timer
     }
   }, [])
 
+  // Handler for onMouseEnter event to update selected tab index on hover
+  const handleTabHover = (index: number) => {
+    setSelectedTabIndex(index);
+  };
+  const scrollbarStyles = `
+    @media (max-width: 767px) {
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px; // Width of the scrollbar on mobile devices
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #888; // Color of the scrollbar thumb
+        border-radius: 6px; // Rounded corners for the scrollbar thumb
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #555; // Color of the scrollbar thumb on hover
+      }
+    }
+  `;
   return (
     <section
       id="features"
       aria-labelledby="features-title"
-      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
+      className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-cyan-100 pt-20 pb-28 sm:py-32 border border-gray-200"
     >
+      <style jsx>{scrollbarStyles}</style>
+
       <div className="-translate-x-[44%] -translate-y-[42%]">
         <Image
           src={backgroundImage}
@@ -74,34 +87,36 @@ export function PrimaryFeatures() {
           unoptimized
         />
       </div>
-      <Container className="relative">
+      <Container className="relative my-20">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2
             id="features-title"
-            className="font-display text-2xl tracking-tight text-white sm:text-4xl md:text-5xl"
+            className="font-display text-2xl tracking-tight text-black sm:text-4xl md:text-5xl bg-clip-text bg-gradient-to-br from-black to-stone-500 text-transparent"
           >
             Unlock the power of conversational AI with Viora.
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
+          <p className="mt-6 text-lg tracking-tight text-gray-500">
             Discover how Viora AI can revolutionize the way you interact with customers, create content, and enhance user experiences.
           </p>
         </div>
         <Tab.Group
           as="div"
-          key={selectedTabIndex} // Use custom key based on selectedTabIndex
+          key={selectedTabIndex}
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
-          defaultIndex={selectedTabIndex} // Use defaultIndex to set selected tab
+          defaultIndex={selectedTabIndex}
         >
           {({ selectedIndex }) => (
             <>
-              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                <Tab.List className="relative z-10 flex space-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-y-1 lg:space-x-0 lg:whitespace-normal">
+              <div className="custom-scrollbar -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+                <Tab.List
+                  className="relative z-10 flex space-x-4 whitespace-nowrap px-4 py-2 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:space-y-1 lg:space-x-0 lg:whitespace-normal rounded-md "
+                >
                   {features.map((feature, featureIndex) => (
                     <div
                       key={feature.title}
                       className={clsx(
-                        'group relative rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6',
+                        'transition-all duration-75 hover:border-gray-800 rounded-md border border-gray-300 group relative rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6',
                         {
                           'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10':
                             selectedIndex === featureIndex,
@@ -113,13 +128,7 @@ export function PrimaryFeatures() {
                       <h3>
                         <Tab
                           className={clsx(
-                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
-                            {
-                              'text-blue-600 lg:text-white':
-                                selectedIndex === featureIndex,
-                              'text-blue-100 hover:text-white lg:text-white':
-                                selectedIndex !== featureIndex,
-                            }
+                            'font-display text-lg hover:border-gray-800 focus:outline-none active:bg-gray-100 [&:not(:focus-visible)]:focus:outline-none'
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-r-none lg:rounded-l-xl" />
@@ -127,11 +136,7 @@ export function PrimaryFeatures() {
                         </Tab>
                       </h3>
                       <p
-                        className={clsx('mt-2 hidden text-sm lg:block', {
-                          'text-white': selectedIndex === featureIndex,
-                          'text-blue-100 group-hover:text-white':
-                            selectedIndex !== featureIndex,
-                        })}
+                        className={clsx('mt-2 hidden text-sm lg:block')}
                       >
                         {feature.description}
                       </p>
@@ -142,13 +147,8 @@ export function PrimaryFeatures() {
               <Tab.Panels className="lg:col-span-7">
                 {features.map((feature) => (
                   <Tab.Panel key={feature.title} unmount={false}>
-                    <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 -top-[6.5rem] -bottom-[4.25rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
-                        {feature.description}
-                      </p>
-                    </div>
-                    <div className="relative mt-10 aspect-[1085/730] w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    {/* ... (Tab.Panel contents remain unchanged) */}
+                    <div className="relative mt-10 aspect-[1085/730] w-[45rem] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md shadow-gray-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Image
                         src={feature.image}
                         alt=""

@@ -114,7 +114,7 @@ export default function Home() {
             title={title}
             description={description}
             demo={
-              title === "Viora AI SDR" ? (
+              title === "Viora AI Industries" ? (
                 <ComponentGrid />
               ) : (
                 demo
@@ -157,7 +157,7 @@ const features = [
     ),
   },
   {
-    title: "Viora AI SDR",
+    title: "Viora AI Industries",
     description:
       "Viora AI transforms sales with real-time, personalized interactions and 24/7 nurturing.",
     demo: (

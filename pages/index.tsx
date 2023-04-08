@@ -1,5 +1,5 @@
 import Card from "@/components/home/card";
-import Trusted from "@/components/home/trusted";
+import Integrations from "@/components/home/integrations";
 // import Team from "@/components/home/team";
 
 import { PrimaryFeatures } from "@/components/home/primaryfeatures";
@@ -13,6 +13,8 @@ import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import VirtualGrid from "@/components/home/virtual-grid";
 import Image from "next/image";
+import { Testimonials } from '@/components/home/testimonials'
+
 
 export default function Home() {
   return (
@@ -104,9 +106,9 @@ export default function Home() {
             title={title}
             description={description}
             demo={
-              title === "Viora AI SDR" ? (
+              title === "Viora AI Industries" ? (
                 <ComponentGrid />
-              ) : title === "Viora Generative Autonomous AI Example" ? (
+              ) : title === "Viora Generative Autonomous AI Platform" ? (
                 <VirtualGrid />
               ) : (
                 demo
@@ -118,25 +120,29 @@ export default function Home() {
       </div>
 
       <div id="integrations-section" >
-        <Trusted />
+        <Integrations />
       </div>
 
       <div id="usecases-section" className="relative">
         <PrimaryFeatures />
       </div>
+      <div id="usecases-section" className="relative">
+        <Testimonials />
+      </div>
+
     </Layout>
   );
 }
 
 const features = [
   {
-    title: "Viora Generative Autonomous AI Example",
+    title: "Viora Generative Autonomous AI Platform",
     description:
       "Our AI enhances organizational efficiency with intelligent decisions, dynamic personalization, and seamless interactions.",
     large: true,
   },
   {
-    title: "Viora AI SDR",
+    title: "Viora AI Industries",
     description:
       "Viora AI transforms sales with real-time, personalized interactions and 24/7 nurturing.",
     demo: (

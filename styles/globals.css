@@ -28,3 +28,26 @@
   animation-name: clickableAnimation;
 }
 
+
+
+@keyframes flowing-gradient {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: -200% 50%;
+  }
+}
+
+.flowingGradient {
+  background-image: linear-gradient(
+    to right,
+    #dbf8ff,  /* Start with the same color */
+    #ffffff,
+    #e0e7ff,
+    #ffffff,
+    #dbf8ff   /* End with the same color */
+  );
+  background-size: 200% auto;
+  animation: flowing-gradient 20s linear infinite;
+}

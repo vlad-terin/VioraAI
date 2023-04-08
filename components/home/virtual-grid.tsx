@@ -10,6 +10,9 @@ type CategoryButtonProps = {
   category: CategoryTypeVirtual;
   iconPath: string;
 };
+type VirtualGridProps = {
+  className?: string; // The className prop is optional and can be a string
+};
 
 
 
@@ -31,7 +34,7 @@ function CategoryButton({ category, iconPath }: CategoryButtonProps) {
   );
 }
 
-export default function VirtualGrid() {
+export default function VirtualGrid({ className }: VirtualGridProps) {
   const categories: CategoryTypeVirtual[] = ["Employee", "Finance", "Sales", "HR", "Legal", "Management"];
   const categoriesWithIcons: Record<CategoryTypeVirtual, string> = {
     Employee: "/icons/employee.png",
@@ -43,7 +46,7 @@ export default function VirtualGrid() {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-4 px-4 md:grid-cols-6 md:auto-rows-[6rem]"> {/* Use 3 columns on mobile and 6 columns on large screens */}
+    <div className={` grid grid-cols-3 gap-4 px-4 md:grid-cols-6 md:auto-rows-[6rem] ${className}`}>
       {Object.entries(categoriesWithIcons).map(([category, iconPath]) => (
         <CategoryButton key={category} category={category as CategoryTypeVirtual} iconPath={iconPath} />
       ))}
