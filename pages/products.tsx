@@ -1,19 +1,28 @@
-
 import Card from "@/components/home/card";
+import Integrations from "@/components/home/integrations";
+import ContactUs from "@/components/home/contactus";
+
+
+import { PrimaryFeatures } from "@/components/home/primaryfeatures";
 import Layout from "@/components/layout";
+import { Link as ScrollLink } from 'react-scroll';
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
 import { DEPLOY_URL, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
+import VirtualGrid from "@/components/home/virtual-grid";
 import Image from "next/image";
+import { Testimonials } from '@/components/home/testimonials'
+
 
 export default function Home() {
   return (
     <Layout>
       <motion.div
-        className="max-w-xl px-5 xl:px-0"
+        id="home-section"
+        className="max-w-2xl px-5 xl:px-0"
         initial="hidden"
         whileInView="show"
         animate="show"
@@ -43,14 +52,14 @@ export default function Home() {
           className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer>Experience the future of sales with Viora</Balancer>
+          <Balancer>The Future of Autonomous Business Operations and Sales with Viora AI</Balancer>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>
-            Harness the power of conversational AI with Viora to deliver personalized and meaningful sales interactions.
+            Harness the power of Generative Autonomous AI with Viora to deliver personalized and meaningful interactions.
           </Balancer>
         </motion.p>
         {/* <motion.div */}
@@ -91,8 +100,8 @@ export default function Home() {
         {/* </motion.div> */}
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
-      <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo }) => (
+      <div id="products-section" className="py-6 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+        {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
             title={title}
@@ -100,31 +109,42 @@ export default function Home() {
             demo={
               title === "Viora AI Industries" ? (
                 <ComponentGrid />
+              ) : title === "Viora Generative Autonomous AI Platform" ? (
+                <VirtualGrid />
               ) : (
                 demo
               )
             }
-          // large={large}
+            large={large}
           />
         ))}
       </div>
-    </Layout>
+
+      <div id="integrations-section" className="relative py-6" >
+        <Integrations />
+      </div>
+
+      <div id="usecases-section" className="relative py-6">
+        <PrimaryFeatures />
+      </div>
+      <div id="testimonials" className="relative py-6">
+        <Testimonials />
+      </div>
+
+      <div id="usecases-section" className="relative py-6">
+        <ContactUs />
+      </div>
+    </Layout >
   );
 }
 
 const features = [
-  // {
-  //   title: "Interact with Viora AI SDR",
-  //   description:
-  //     "Our conversational AI revolutionizes sales engagement with real-time, personalized interactions and 24/7 lead nurturing.",
-  //   large: true,
-  // },
-  // {
-  //   title: "Viora Conversational AI",
-  //   description:
-  //     "Viora has the ability to answer questions trained on your website content",
-  //   demo: <WebVitals />,
-  // },
+  {
+    title: "Viora Generative Autonomous AI Platform",
+    description:
+      "Our AI enhances organizational efficiency with intelligent decisions, dynamic personalization, and seamless interactions.",
+    large: true,
+  },
   {
     title: "Viora AI Industries",
     description:

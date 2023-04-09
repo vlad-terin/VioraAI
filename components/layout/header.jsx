@@ -107,8 +107,8 @@ export function Header() {
                 <ScrollLink to="vision-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
                   Vision
                 </ScrollLink>
-                <ScrollLink to="team-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
-                  Our Team
+                <ScrollLink to="Contact-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
+                  Investors
                 </ScrollLink>
               </div>
             </li>

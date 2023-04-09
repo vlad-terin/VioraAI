@@ -1,3 +1,4 @@
+import { Footer } from './footer';
 import Image from "next/image";
 import { Header } from './header'
 import { Link as ScrollLink } from 'react-scroll';
@@ -48,6 +49,7 @@ export default function Layout({
       <main className={`w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100 flex w-full flex-col items-center justify-center py-32 ${contentClass}`}>
         {children}
       </main>
+      <Footer />
     </>
   )
 }

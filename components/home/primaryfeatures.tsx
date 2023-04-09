@@ -75,7 +75,7 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-labelledby="features-title"
-      className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-cyan-100 pt-20 pb-28 sm:py-32 border border-gray-200"
+      className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-cyan-100  sm:py-32 border border-gray-200"
     >
       <style jsx>{scrollbarStyles}</style>
 
@@ -87,7 +87,7 @@ export function PrimaryFeatures() {
           unoptimized
         />
       </div>
-      <Container className="relative my-20">
+      <Container className="relative py-6">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2
             id="features-title"
@@ -102,7 +102,7 @@ export function PrimaryFeatures() {
         <Tab.Group
           as="div"
           key={selectedTabIndex}
-          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
+          className=" grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
           defaultIndex={selectedTabIndex}
         >

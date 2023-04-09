@@ -2,12 +2,12 @@ import Image from 'next/image';
 
 export default function Integrations() {
   return (
-    <div className="my-20 text-center">
-      <div className="my-10 bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]">
+    <div className="py-6 text-center">
+      <div className="py-6 bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]">
         Integrations
       </div>
-      <div className={`bg-gradient-to-br from-indigo-50 via-white to-cyan-100 relative overflow-hidden flowingGradient rounded-xl border border-gray-200 bg-white shadow-md items-center bg-white bg-opacity-75 rounded-xl shadow-md flex flex-nowrap space-x-18 h-auto justify-center overflow-visible p-9 w-full`}>
-        <ul className="my-10 grid grid-cols-3 gap-14 md:grid-cols-3 lg:grid-cols-6">
+      <div className={`bg-gradient-to-br from-indigo-50 via-white to-cyan-100 relative col-span-1  overflow-hidden flowingGradient rounded-xl border border-gray-200 bg-white shadow-md py-6 px-4`}>
+        <ul className="py-6 grid grid-cols-3 gap-14 md:grid-cols-3 lg:grid-cols-6">
 
           <li className="flex justify-center">
             <Image
