@@ -10,7 +10,7 @@ const PrivacyPage: React.FC = () => {
         <h1 className="text-2xl font-bold mb-4">Privacy Policy</h1>
         <p className="mb-4">PLEASE READ THIS PRIVACY POLICY CAREFULLY BEFORE USING VIORA AI. BY ACCESSING OR USING VIORA AI, YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS DESCRIBED HEREIN AND ALL TERMS INCORPORATED BY REFERENCE. IF YOU DO NOT AGREE TO ALL OF THESE TERMS AND CONDITIONS, DO NOT USE VIORA AI.</p>
         <h2 className="text-xl font-bold mt-6 mb-2">Introduction</h2>
-        <p className="mb-4">Welcome to Viora AI, an online platform that leverages artificial intelligence to deliver cutting-edge solutions. This privacy policy (the "Privacy Policy") governs your access to and use of viora.ai, including any content, functionality, and services offered on or through viora.ai (the "Services").</p>
+        <p className="mb-4">Welcome to Viora AI, an online platform that leverages artificial intelligence to deliver cutting-edge solutions. This privacy policy (the &quot;Privacy Policy&quot;) governs your access to and use of viora.ai, including any content, functionality, and services offered on or through viora.ai (the &quot;Services&quot;).</p>
         <h2 className="text-xl font-bold mt-6 mb-2">Scope of the Services</h2>
         <p className="mb-4">Viora AI provides a range of AI-driven solutions, including predictive analytics, data analysis, and automation, to help organizations make informed and effective decisions. The Services are intended for use by businesses and professionals. By accessing or using the Services, you represent and warrant that you have the necessary knowledge and experience to use the Services.</p>
         <h2 className="text-xl font-bold mt-6 mb-2">Privacy Policy</h2>
@@ -58,7 +58,7 @@ const PrivacyPage: React.FC = () => {
         <h2 className="text-xl font-bold mt-6 mb-2">Data Retention</h2>
         <p className="mb-4">We will retain your personal information for as long as necessary to fulfill the purposes for which it was collected, unless a longer retention period is required or permitted by law.</p>
         <h2 className="text-xl font-bold mt-6 mb-2">Contact Us</h2>
-        <p className="mb-4">If you have any questions or concerns about our Privacy Policy or the way we handle your personal information, please don't hesitate to contact us through the contact information provided on our platform.</p>
+        <p className="mb-4">If you have any questions or concerns about our Privacy Policy or the way we handle your personal information, please don&quot;t hesitate to contact us through the contact information provided on our platform.</p>
       </div>
       <ContactUs />
     </Layout>

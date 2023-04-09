@@ -32,7 +32,7 @@ const CookiePolicyPage: React.FC = () => {
         <h2 className="text-xl font-bold mt-6 mb-2">Changes to Our Cookie Policy</h2>
         <p className="mb-4">We may update our Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We encourage you to review this Cookie Policy periodically to stay informed about our use of cookies and other tracking technologies.</p>
         <h2 className="text-xl font-bold mt-6 mb-2">Contact Us</h2>
-        <p className="mb-4">If you have any questions or concerns about our Cookie Policy or the way we use cookies and other tracking technologies, please don't hesitate to contact us through the contact information provided on our platform.</p>
+        <p className="mb-4">If you have any questions or concerns about our Cookie Policy or the way we use cookies and other tracking technologies, please don&quot;t hesitate to contact us through the contact information provided on our platform.</p>
       </div>
     </Layout>
   );
