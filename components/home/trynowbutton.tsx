@@ -1,11 +1,18 @@
 import styles from './buttonEffect.module.css'; // Import the button effect styles as a CSS module and assign it to 'styles'
 import React from "react";
-import { useDemoModalVirtual } from "@/components/home/demo-modal-virtual";
+import { useDemoModalVirtual, CategoryTypeVirtual } from "@/components/home/demo-modal-virtual"; // Import the useDemoModalVirtual hook and CategoryType from the demo-modal module
 import Image from "next/image"; // Import Image component
-import PropTypes from "prop-types"; // Import PropTypes
 
-export function TryNowButton({ category, iconPath, buttonText }) {
-  const { DemoModal, setShowDemoModal } = useDemoModalVirtual(category);
+// Define TypeScript types for props
+type TryNowButtonProps = {
+  category: CategoryTypeVirtual; // Use the correct type for 'category'
+  iconPath: string;
+  buttonText: string;
+};
+
+// Use TypeScript types for props
+export function TryNowButton({ category, iconPath, buttonText }: TryNowButtonProps) {
+  const { DemoModal, setShowDemoModal } = useDemoModalVirtual(category); // Use the useDemoModalVirtual hook
   return (
     <React.Fragment>
       <DemoModal />
@@ -20,11 +27,3 @@ export function TryNowButton({ category, iconPath, buttonText }) {
     </React.Fragment>
   );
 }
-
-// Define prop types using PropTypes
-TryNowButton.propTypes = {
-  category: PropTypes.string.isRequired,
-  iconPath: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired,
-};
-
