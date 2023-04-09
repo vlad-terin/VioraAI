@@ -10,7 +10,7 @@ import Layout from "@/components/layout";
 import { Link as ScrollLink } from 'react-scroll';
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
-import { DEPLOY_URL, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
@@ -183,7 +183,7 @@ const features = [
     description:
       "Viora AI transforms sales with real-time, personalized interactions and 24/7 nurturing.",
     demo: (
-      <a href={DEPLOY_URL}>
+      <a >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://vercel.com/button"

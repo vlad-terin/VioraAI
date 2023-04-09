@@ -1,3 +1,4 @@
+import styles from './buttonEffect.module.css'; // Import the button effect styles as a CSS module and assign it to 'styles'
 import React, { FormEvent } from 'react';
 import Balancer from "react-wrap-balancer";
 import axios from 'axios';
@@ -80,7 +81,7 @@ const ContactUs: React.FC = () => {
             <div className="flex justify-center py-6">
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className={`${styles['glow-on-hover']} flex items-center justify-center w-full md:w-auto px-4 py-3 md:px-6 md:py-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded focus:outline-none focus:shadow-outline`}
               >
                 Join the Revolution
               </button>
