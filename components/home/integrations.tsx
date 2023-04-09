@@ -3,8 +3,8 @@ import Image from 'next/image';
 export default function Integrations() {
   return (
     <div className="py-6 text-center">
-      <div className="py-6 bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]">
-        Integrations
+      <div className="py-6 text-center font-display text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]">
+        <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">Integrations</span>
       </div>
       <div className={`bg-gradient-to-br from-indigo-50 via-white to-cyan-100 relative col-span-1  overflow-hidden flowingGradient rounded-xl border border-gray-200 bg-white shadow-md py-6 px-4`}>
         <ul className="py-6 grid grid-cols-3 gap-14 md:grid-cols-3 lg:grid-cols-6">

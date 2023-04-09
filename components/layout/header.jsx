@@ -53,17 +53,20 @@ function MobileNavigation() {
               leaveTo="opacity-0 scale-95"
             >
               <Popover.Panel as="ul" className="absolute inset-x-0 top-full mt-4 origin-top space-y-4 rounded-2xl bg-white p-6 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5">
-                <ScrollLink to="products-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={() => close()}>
+                <ScrollLink to="home-section" smooth={true} duration={500} offset={-160} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={() => close()}>
                   Products
                 </ScrollLink>
-                <ScrollLink to="integrations-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={() => close()}>
+                <ScrollLink to="integrations-section" smooth={true} duration={500} offset={-20} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={() => close()}>
                   Integrations
                 </ScrollLink>
-                <ScrollLink to="usecases-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={() => close()}>
+                <ScrollLink to="usecases-section" smooth={true} duration={500} offset={-40} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={() => close()}>
                   Use Cases
                 </ScrollLink>
                 <ScrollLink to="vision-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={() => close()}>
                   Vision
+                </ScrollLink>
+                <ScrollLink to="contactus-section" smooth={true} duration={500} offset={-140} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" onClick={() => close()}>
+                  Contact Us
                 </ScrollLink>
               </Popover.Panel>
 
@@ -95,10 +98,10 @@ export function Header() {
             <li>
               <div className="justify-between hidden md:flex space-x-2">
                 <Logo />
-                <ScrollLink to="home-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
-                  Home
+                <ScrollLink to="home-section" smooth={true} duration={500} offset={-75} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
+                  Products
                 </ScrollLink>
-                <ScrollLink to="integrations-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
+                <ScrollLink to="integrations-section" smooth={true} duration={500} offset={-65} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >
                   Integrations
                 </ScrollLink>
                 <ScrollLink to="usecases-section" smooth={true} duration={500} className="block py-2 px-4 text-gray-700 hover:text-blue-500 cursor-pointer" >

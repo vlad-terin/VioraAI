@@ -94,12 +94,12 @@ export const Testimonials: React.FC = () => {
         <div className="mx-auto max-w-2xl md:text-center">
           <h2
             id="testimonials-title"
-            className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
+            className="font-display py-6 bg-gradient-to-br from-black to-stone-500 bg-clip-text text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
           >
-            Hear from Industry Leaders
+            <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">Hear</span> from <span className="text-orange-500 font-bold">Industry Leaders</span>
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Harness the potential of AI-driven automation to revolutionize the way your organization operates, connects with customers, and achieves unparalleled success.
+            <span className="text-cyan-400 font-bold">Harness</span> the potential of <span className="text-emerald-500 font-bold">AI-driven automation</span> to <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">revolutionize</span> the way your organization operates, connects with customers, and achieves <span className="text-orange-500 font-bold">unparalleled success</span>.
           </p>
         </div>
         <ul className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">

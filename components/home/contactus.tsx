@@ -32,10 +32,10 @@ const ContactUs: React.FC = () => {
       <div className="container mx-auto px-4 max-w-5xl"> {/* Set maximum width on desktop */}
         <div className="text-center">
           <h2 className="py-6 bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]">
-            Contact Us
+            <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">Invest</span> in the Future of AI
           </h2>
           <Balancer>
-            Have any questions or need assistance? Get in touch with us.
+            We invite you to <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">invest</span> in our mission, <span className="text-cyan-400 font-bold bg-gray-200 px-1 py-0.5 rounded">fuel our growth</span>, and unlock <span className="text-orange-500 font-bold bg-gray-200 px-1 py-0.5 rounded">limitless opportunities</span>—join us in leading the <span className="font-bold text-emerald-500">AI revolution</span> and shaping the future of technology today. To see the full demo of our innovative AI solution, <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">get in touch</span> with us and experience the power of Viora AI firsthand.
           </Balancer>
         </div>
         <div className="flex justify-center">
@@ -73,7 +73,7 @@ const ContactUs: React.FC = () => {
                 id="message"
                 name="message"
                 className="w-full items-center space-x-2 rounded-md border border-gray-300 px-3 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100"
-                placeholder="Enter your message"
+                placeholder="Share your interest or inquiries about investing in Viora AI"
                 rows={4}
               ></textarea>
             </div>
@@ -82,7 +82,7 @@ const ContactUs: React.FC = () => {
                 type="submit"
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
-                Submit
+                Join the Revolution
               </button>
             </div>
           </form>

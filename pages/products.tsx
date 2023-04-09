@@ -49,10 +49,10 @@ export default function Home() {
           </p>
         </motion.a>
         <motion.h1
-          className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
+          className="text-center font-display text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer>The Future of Autonomous Business Operations and Sales with Viora AI</Balancer>
+          <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">The Future</span> of <span className="text-orange-500 font-bold">Autonomous Business Operations</span> and <span className="text-cyan-400 font-bold">Sales</span> with <span className="text-emerald-500 font-bold">Viora AI</span>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"

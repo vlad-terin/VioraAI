@@ -131,7 +131,7 @@ export default function Home() {
         <Testimonials />
       </div>
 
-      <div id="usecases-section" className="relative py-6">
+      <div id="contact-section" className="relative py-6">
         <ContactUs />
       </div>
     </Layout >

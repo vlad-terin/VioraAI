@@ -21,7 +21,6 @@ export default function Home() {
   return (
     <Layout>
       <motion.div
-        id="home-section"
         className="max-w-2xl px-5 xl:px-0"
         initial="hidden"
         whileInView="show"
@@ -49,10 +48,10 @@ export default function Home() {
           </p>
         </motion.a>
         <motion.h1
-          className="bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]"
+          className="text-center font-display text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]"
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <Balancer>The Future of Autonomous Business Operations and Sales with Viora AI</Balancer>
+          <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">The Future</span> of <span className="text-orange-500 font-bold">Autonomous Business Operations</span> and <span className="text-cyan-400 font-bold">Workflows</span> with <span className="text-emerald-500 font-bold">Viora AI</span>
         </motion.h1>
         <motion.p
           className="mt-6 text-center text-gray-500 md:text-xl"
@@ -100,7 +99,7 @@ export default function Home() {
         {/* </motion.div> */}
       </motion.div>
       {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
-      <div id="products-section" className="py-6 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+      <div id="home-section" className="py-6 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
@@ -127,11 +126,11 @@ export default function Home() {
       <div id="usecases-section" className="relative py-6">
         <PrimaryFeatures />
       </div>
-      <div id="testimonials" className="relative py-6">
+      <div id="vision-section" className="relative py-6">
         <Testimonials />
       </div>
 
-      <div id="usecases-section" className="relative py-6">
+      <div id="contactus-section" className="relative py-6">
         <ContactUs />
       </div>
     </Layout >

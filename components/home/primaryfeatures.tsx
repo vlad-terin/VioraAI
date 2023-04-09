@@ -91,12 +91,12 @@ export function PrimaryFeatures() {
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2
             id="features-title"
-            className="font-display text-2xl tracking-tight text-black sm:text-4xl md:text-5xl bg-clip-text bg-gradient-to-br from-black to-stone-500 text-transparent"
+            className="font-dpy-6 bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-4xl font-bold tracking-[-0.02em] text-transparent drop-shadow-sm md:text-7xl md:leading-[5rem]splay text-3xl tracking-tight text-slate-900 sm:text-4xl"
           >
-            Unlock the power of conversational AI with Viora.
+            <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">Unlock</span> the power of <span className="text-orange-500 font-bold">conversational AI</span> with <span className="text-cyan-400 font-bold">Viora</span>.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-gray-500">
-            Discover how Viora AI can revolutionize the way you interact with customers, create content, and enhance user experiences.
+            Discover how <span className="text-emerald-500 font-bold">Viora AI</span> can <span className="text-amber-400 font-bold bg-gray-200 px-1 py-0.5 rounded">revolutionize</span> the way you interact with customers, create content, and <span className="text-orange-500 font-bold">enhance user experiences</span>.
           </p>
         </div>
         <Tab.Group
