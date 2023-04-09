@@ -1,4 +1,6 @@
 import Card from "@/components/home/card";
+import styles from '../components/home/buttonEffect.module.css'; // Import the button effect styles as a CSS module and assign it to 'styles'
+import { TryNowButton } from "@/components/home/trynowbutton";
 import Integrations from "@/components/home/integrations";
 import ContactUs from "@/components/home/contactus";
 
@@ -18,6 +20,16 @@ import { Testimonials } from '@/components/home/testimonials'
 
 
 export default function Home() {
+  // Define animation variants for the buttons
+  const buttonsVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
     <Layout>
       <motion.div
@@ -61,6 +73,28 @@ export default function Home() {
             Harness the power of Generative Autonomous AI with Viora to deliver personalized and meaningful interactions.
           </Balancer>
         </motion.p>
+        {/* Buttons */}
+        <motion.div
+          className="my-20 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4"
+          variants={buttonsVariants}
+          initial="hidden"
+          animate="show"
+        >
+          <TryNowButton
+            category="Employee"
+            iconPath="/icons/employee.png" // Provide the correct path to the icon
+            buttonText="Try Now"
+          />
+          <ScrollLink
+            to="contactus-section"
+            smooth={true}
+            duration={500}
+            offset={-140}
+            className={`${styles['glow-on-hover']} flex items-center justify-center w-full md:w-auto px-4 py-3 md:px-6 md:py-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded focus:outline-none focus:shadow-outline cursor-pointer`}
+          >
+            <span>Contact Us</span>
+          </ScrollLink>
+        </motion.div>
         {/* <motion.div */}
         {/*   className="mx-auto mt-6 flex items-center justify-center space-x-5" */}
         {/*   variants={FADE_DOWN_ANIMATION_VARIANTS} */}

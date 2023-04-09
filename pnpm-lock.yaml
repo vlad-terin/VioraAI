@@ -37,6 +37,7 @@ specifiers:
   prisma: ^4.8.1
   react: 18.2.0
   react-dom: 18.2.0
+  react-hcaptcha: ^0.1.1
   react-markdown: ^8.0.4
   react-scroll: ^1.8.9
   react-wrap-balancer: ^0.3.0
@@ -70,6 +71,7 @@ dependencies:
   next-auth: 4.21.0_q76c2b4vyoegvsbrcwkfvimnai
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hcaptcha: 0.1.1_biqbaboplfbrettd7655fr4n2y
   react-markdown: 8.0.6_kzbn2opkn2327fwg5yzwzya5o4
   react-scroll: 1.8.9_biqbaboplfbrettd7655fr4n2y
   react-wrap-balancer: 0.3.0_react@18.2.0
@@ -3290,6 +3292,17 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-hcaptcha/0.1.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-p0s7uDOZAh28dbcmP2bXsox2NmIwQ6OtDTgjCYwfe49kHeCU67Omma1DhzYiGWQJRC6eTUZEikjsm+WT7bmy2g==}
+    deprecated: Deprecated in favor of https://www.npmjs.com/package/@hcaptcha/react-hcaptcha
+    peerDependencies:
+      react: ^16.4.1
+      react-dom: ^16.4.1
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-is/16.13.1:
