@@ -194,12 +194,12 @@ const features = [
     ),
   },
   {
-    title: "Viora Conversational AI",
+    title: "Viora Autonomous AI",
     description:
       "Viora has the ability to answer questions trained on your website content",
     demo: (
       <div className="flex items-center justify-center space-x-20">
-        <a href="https://chatbot.viora.ai" rel="noopener noreferrer">
+        <a href="https://autogpt.viora.ai" rel="noopener noreferrer">
           <Image alt="viora logo" src="/logo.png" width={50} height={50} />
         </a>
         {/* <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} /> */}
